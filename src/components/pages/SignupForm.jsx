@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
 import NavBar from '../components/NavBar';
 
-const LoginForm = () => (
+const SignupForm = () => (
   <div className='login-form'>
     {/*
       Heads up! The styles below are necessary for the correct render of this example.
@@ -20,7 +20,7 @@ const LoginForm = () => (
     <Grid textAlign='center' style={{ height: '100%' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
         <Header as='h2' color='teal' textAlign='center'>
-          Log-in to your account
+          Create an Account
         </Header>
         <Form size='large'>
           <Segment stacked>
@@ -34,7 +34,7 @@ const LoginForm = () => (
             />
 
             <Button color='teal' fluid size='large'>
-              Login
+              Sign up
             </Button>
           </Segment>
         </Form>
@@ -46,4 +46,4 @@ const LoginForm = () => (
   </div>
 )
 
-export default LoginForm
+export default SignupForm
