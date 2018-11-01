@@ -40,7 +40,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button color='teal' size='huge'>
+    <Button as={NavLink} activeClassName="" exact to="/Doc" color='teal' size='huge'>
       Get Started
       <Icon name='right arrow' />
     </Button>
@@ -75,8 +75,9 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign='center'
-            style={{ minHeight: 700, padding: '1em 0em' }}
+            style={{ minHeight: 700, padding: '0em 0em' }}
             vertical
+            color='blue'
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -204,7 +205,7 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
               "Sick Page"
             </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>That'qs right</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
@@ -234,7 +235,7 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Case Studies</a>
+          <a href='#'> Examples </a>
         </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           This is another header
