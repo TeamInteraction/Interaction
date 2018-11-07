@@ -25,7 +25,7 @@ class MyEditor extends React.Component {
 
   render() {
     return (
-      <div style={styles.editor} onClick={this.focusEditor}>
+      <div style={styles.editor} onClick={this.focusEditor} id={"test"} >
         <Editor
           ref={this.setEditor}
           editorState={this.state.editorState}

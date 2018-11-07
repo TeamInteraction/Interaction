@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 import { Menu, Dropdown, Image, Icon, Button, Loader } from 'semantic-ui-react';
+import jsPDF from 'jspdf';
 
 
 class Document extends React.Component {
@@ -15,6 +16,19 @@ class Document extends React.Component {
     pri.print();
   }
 
+  download(){
+    var doc = new jsPDF();
+    var content = document.getElementById("test");
+    doc.fromHTML(
+    content,
+    15,
+    15,
+    {
+      'width': 180
+    });
+    doc.save('test.pdf');
+  }
+
 
 
   render() {
@@ -25,7 +39,7 @@ class Document extends React.Component {
           <Dropdown.Menu>
             <Dropdown.Item text='Rename...' description='crtl + r'/>
             <Dropdown.Item text='Print' onClick={this.print}/>
-            <Dropdown.Item text='Download/Export As'/>
+            <Dropdown.Item text='Download/Export As' onClick={this.download}/>
           </Dropdown.Menu>
         </Dropdown>
 
@@ -60,7 +74,6 @@ class Document extends React.Component {
 
         </Menu>
 
-          <h1 id="test">Toolbar page</h1>
           <iframe id="toprint" style={{height: '0px', width: '0px', position: 'absolute'}}></iframe>
 
       </div>
