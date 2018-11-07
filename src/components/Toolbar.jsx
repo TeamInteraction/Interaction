@@ -19,13 +19,7 @@ class Document extends React.Component {
   download(){
     var doc = new jsPDF();
     var content = document.getElementById("test");
-    doc.fromHTML(
-    content,
-    15,
-    15,
-    {
-      'width': 180
-    });
+    doc.fromHTML( content, 15, 15, { 'width': 180});
     doc.save('test.pdf');
   }
 
@@ -40,19 +34,6 @@ class Document extends React.Component {
             <Dropdown.Item text='Rename...' description='crtl + r'/>
             <Dropdown.Item text='Print' onClick={this.print}/>
             <Dropdown.Item text='Download/Export As' onClick={this.download}/>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        <Dropdown text='Edit' pointing className='item' icon={null}>
-          <Dropdown.Menu>
-            <Dropdown.Item text='Undo' description='crtl + z'/>
-            <Dropdown.Item text='Redo' description='crtl + y'/>
-            <Dropdown.Divider/>
-            <Dropdown.Item text='Cut' description='crtl + x'/>
-            <Dropdown.Item text='Copy' description='crtl + c'/>
-            <Dropdown.Item text='Paste' description='crtl + v'/>
-            <Dropdown.Divider/>
-            <Dropdown.Item text='Find and Replace'/>
           </Dropdown.Menu>
         </Dropdown>
 

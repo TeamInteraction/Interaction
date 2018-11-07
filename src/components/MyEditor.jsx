@@ -39,7 +39,7 @@ class MyEditor extends React.Component {
 const styles = {
   editor: {
     border: '1px solid gray',
-    minHeight: '6em'
+    minHeight: '6em',
   }
 };
 export default withRouter(MyEditor);
