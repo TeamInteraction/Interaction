@@ -40,7 +40,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button as={NavLink} activeClassName="" exact to="/Doc" color='teal' size='huge'>
+    <Button color='teal' size='huge'>
       Get Started
       <Icon name='right arrow' />
     </Button>
