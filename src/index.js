@@ -7,7 +7,6 @@ import { Route, Switch } from 'react-router-dom';
 import HomepageLayout from './components/pages/HomepageLayout';
 import LoginForm from './components/pages/LoginForm';
 import SignupForm from './components/pages/SignupForm';
-import Landing from './components/pages/Landing';
 import Toolbar from './components/Toolbar';
 import MyEditor from './components/MyEditor';
 import Document from './components/pages/Document';
