@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route exact path="/Login" component={LoginForm} />
         <Route exact path="/Signup" component={SignupForm} />
         <Route exact path="/" component={HomepageLayout} />
-        <Route exact path="/doc" compontent={Document} />
+        <Route exact path="/doc" component={Document} />
       </Switch>
     </div>
   </HashRouter>,
