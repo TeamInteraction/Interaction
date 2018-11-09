@@ -26,7 +26,10 @@
     "request": "^2.85.0",
     "semantic-ui-css": "^2.3.1",
     "semantic-ui-react": "^0.79.1",
-    "tape": "^4.9.0"
+    "simpl-schema": "^1.5.3",
+    "tape": "^4.9.0",
+    "uniforms": "^1.27.0",
+    "uniforms-semantic": "^1.27.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import { Menu, Dropdown, Image, Icon, Button, Loader } from 'semantic-ui-react';
+import { Menu, Dropdown } from 'semantic-ui-react';
 import jsPDF from 'jspdf';
 
 

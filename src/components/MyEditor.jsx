@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Editor, EditorState} from 'draft-js';
 import { withRouter } from 'react-router';
 
