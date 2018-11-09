@@ -7,8 +7,6 @@ import {
   Grid,
   Header,
   Icon,
-  Image,
-  List,
   Menu,
   Responsive,
   Segment,
@@ -40,7 +38,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button color='teal' size='huge'>
+    <Button as={NavLink} activeClassName="" exact to="/Doc" color='teal' size='huge'>
       Get Started
       <Icon name='right arrow' />
     </Button>
