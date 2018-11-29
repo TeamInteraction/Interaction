@@ -28,7 +28,6 @@
     "uniforms-semantic": "^1.23.1",
     "draft-js": "^0.10.5",
     "jspdf": "^1.4.1"
-
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",

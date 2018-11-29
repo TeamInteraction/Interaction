@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import { Groups } from '/imports/api/group/group';
 import { withRouter, Link, NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Bert } from 'meteor/themeteorchef:bert';
+
 
 
 class AddUser extends React.Component {
@@ -52,7 +54,9 @@ class AddUser extends React.Component {
                 $set: {
                   members
                 }
-              });
+              }, (error) => (error ?
+                Bert.alert({ type: 'danger', message: `Add Failed: ${error.message}` }) :
+                Bert.alert({ type: 'success', message: 'User Added' })));
             this.setState({ error: '' });
 
         }
