@@ -24,7 +24,6 @@ class SimpleMap extends React.Component {
             <AnyReactComponent
                 lat={this.props.latitude}
                 lng={this.props.longitude}
-                image= "/images/halemanoa-icon-transparent.png"
             />
           </GoogleMapReact>
         </div>

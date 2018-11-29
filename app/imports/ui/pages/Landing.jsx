@@ -54,11 +54,6 @@ class Landing extends React.Component {
                 style={{padding: "60px", backgroundColor: "#424B54"}}
             >
               <Grid.Column centered>
-                <Image
-                    centered
-                  src="/images/house-icon.png"
-                  size="medium"
-                />
               </Grid.Column>
               <Grid.Column>
                 <p  className="landing-header font-blue">Share Documents<hr/></p> 
@@ -74,8 +69,7 @@ class Landing extends React.Component {
               <Grid.Row centered>
 
                 <p  className="landing-text">
-                  The Hale Manoa web portal is designed to help guide the UH Manoa community to discover compatible roommates and find affordable housing.
-                </p>
+                t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis e                </p>
 
               </Grid.Row>
             </Grid>
@@ -84,24 +78,10 @@ class Landing extends React.Component {
                 style={{padding: "30px", backgroundColor: "#424B54"}}
             >
               <Grid.Row>
-                <p  className="landing-header font-blue">Explore Hale Manoa<hr/></p>
+                <p  className="landing-header font-blue">Explore<hr/></p>
 
               </Grid.Row>
 
-              <Card.Group>
-                <Card
-                    as={NavLink} activeClassName="" exact to={`/connect`}
-                    href='body'
-                    image='/images/people.jpg'
-                    header='Find your next roommate'
-                />
-                <Card
-                    as={NavLink} activeClassName="" exact to={`/list`}
-                    href='body'
-                    image='/images/bedroom.jpg'
-                    header='View Homes'
-                />
-              </Card.Group>
             </Grid>
             <Grid
                 columns={3}
@@ -110,19 +90,13 @@ class Landing extends React.Component {
             >
               <Grid.Column centered>
                 <Icon name="edit" size="huge"></Icon>
-                <p className="landing-header font-green">Build your profile<hr/></p>
-                <p  className="landing-text">Add interests, hobbies, and other information about yourself to find the perfect roommate! </p>
 
               </Grid.Column>
               <Grid.Column>
                 <Icon name="users" size="huge"></Icon>
-                <p  className="landing-header font-green">Meet Roommates<hr/></p>
-                <p  className="landing-text"> View other user profiles and send them a message! </p>
               </Grid.Column>
               <Grid.Column>
                 <Icon name="home" size="huge"></Icon>
-                <p  className="landing-header font-green">Live in Manoa<hr/></p>
-                <p  className="landing-text"> Find the most affordable and adequate housing for your living style </p>
               </Grid.Column>
 
             </Grid>
