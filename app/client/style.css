@@ -1,0 +1,155 @@
+.footer-background {
+  background-color: #000;
+  color: #999;
+  margin-top:10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-link {
+  color: #999;
+}
+
+.landing-main{
+  background-size: cover;
+  padding-top: 0px;
+  padding-bottom: 60px;
+}
+
+.title-main{
+  font-size: 60px;
+  margin-top: 100px;
+}
+
+.navigation-main{
+  margin-top: 60px;
+}
+
+.main-text{
+  color: white;
+  text-shadow: 5px 5px 4px #000000;
+  font-size: 100px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.landing-header{
+  font-size: 45px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.landing-text{
+  font-size: 35px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.font-white{
+  color: white;
+}
+.font-black{
+  color: black;
+}
+
+.font-blue{
+  color:dodgerblue;
+}
+
+.font-green{
+  color: #1aa62a;
+}
+
+.font-field {
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Fira Sans", sans-serif;
+}
+
+
+.grid-align {
+  margin-right: 70px;
+}
+
+.grid-align-2 {
+  margin-left: 65px;
+}
+
+.grid-background {
+  background-color: #fff6f0;
+  margin-top: 14px;
+}
+
+.grid-background-side {
+  background-image: url("/images/house-pattern.jpg");
+  margin-top: 14px;
+}
+
+
+.grid-bg-image {
+  background-image: url("/images/manoa-area.png");
+}
+
+.button-spacing {
+  margin-left: 250px;
+}
+
+.button-spacing-2 {
+  margin-left: 370px;
+}
+
+
+.editprofile-container {
+  background-color: #AFD2E9;
+  margin-top: 125px;
+  border-radius: 25px;
+  margin-bottom: 125px;
+}
+
+.signout-container {
+  margin-top: 240px;
+  margin-bottom: 350px;
+  border-radius: 25px;
+  background-color:#fff6f0;
+}
+
+.signin-spacing {
+  margin-right: 135px;
+}
+
+.connect-button-spacing {
+  margin-right: 400px;
+}
+
+.listing-spacing {
+margin-right: 430px;
+}
+
+.profile-top-margin {
+  margin-top: 20px;
+}
+
+.segment-spacing {
+  margin-right: 100px;
+}
+
+.profile-picture-spacing {
+  margin-left: 100px;
+}
+
+.segment-color {
+  background-color: #f0f6ff;
+}
+
+.msgboard-container {
+  margin-bottom: 500px;
+}
+

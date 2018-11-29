@@ -1,0 +1,46 @@
+{
+  "name": "meteor-application-template-react",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.39",
+    "classnames": "^2.2.5",
+    "faker": "^4.1.0",
+    "geocoder": "^0.2.3",
+    "google-map-react": "^0.34.0",
+    "googlemaps": "^1.12.0",
+    "graphql": "^0.13.2",
+    "markerclustererplus": "^2.1.4",
+    "meteor-node-stubs": "^0.3.3",
+    "node-geocoder": "^3.22.0",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.2",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-geocode": "0.0.7",
+    "react-google-maps": "^9.4.5",
+    "react-native-geocoding": "^0.3.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "semantic-ui-css": "^2.3.0",
+    "semantic-ui-react": "^0.77.2",
+    "simpl-schema": "^1.4.2",
+    "uniforms": "^1.23.1",
+    "uniforms-semantic": "^1.23.1",
+    "draft-js": "^0.10.5",
+    "jspdf": "^1.4.1"
+
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-meteor": "^4.2.1",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "scripts": {
+    "start": "meteor --no-release-check --settings ../config/settings.development.json",
+    "lint": "eslint --quiet ./imports"
+  }
+}

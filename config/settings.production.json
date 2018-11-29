@@ -1,0 +1,196 @@
+{
+  "defaultAccounts": [
+    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "john@foo.com", "password": "changeme" },
+    { "email": "test@foo.com", "password": "changeme" },
+    { "email": "idk@foo.com", "password": "changeme" },
+    { "email": "bob@foo.com", "password": "changeme" },
+    { "email": "bill@foo.com", "password": "changeme" }
+  ],
+  "defaultHousing": [
+    {
+      "streetaddress": "2211 Ala Wai Blvd",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://43b301fb2f83bd2719f4-7e2c9a1717b3351cc628e38f0a1ac906.ssl.cf5.rackcdn.com/201803681-condo-townhouse-1xhfwr8-m.jpg",
+      "zipcode":96815,
+      "unitnumber": "1407",
+      "longitude": -157.826939,
+      "latitude": 21.282381,
+      "propertytype": "CONDO",
+      "rentprice": 2000,
+      "beds": 2,
+      "baths": 1,
+      "squarefeet": 300,
+      "description": "See the possibilities! This is a 1/1/0 unit in Waikiki/Ala Wai; from the lanai, you can view the mountain, Ala Wai Canal and the golf course",
+      "owner": "john@foo.com"
+    },
+    {
+      "streetaddress": "2211 Ala Wai Blvd",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://ssl.cdn-redfin.com/photo/169/mbpaddedwide/879/genMid.201630879_0.jpg",
+      "zipcode":96815,
+      "unitnumber": "1520",
+      "longitude": -157.826939,
+      "latitude": 21.282381,
+      "propertytype": "HOUSE",
+      "rentprice": 1500,
+      "beds": 2,
+      "baths": 1,
+      "squarefeet": 300,
+      "description": "See the possibilities! This is a 1/1/0 unit in Waikiki/Ala Wai; from the lanai, you can view the mountain, Ala Wai Canal and the golf course",
+      "owner": "test@foo.com"
+    },
+    {
+      "streetaddress": "2211 Ala Wai Blvd",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://p.rdcpix.com/v01/l75b3b043-m1xd-w640_h480_q80.jpg",
+      "zipcode": 96815,
+      "unitnumber": "1407",
+      "longitude": -157.826939,
+      "latitude": 21.282381,
+      "propertytype": "TOWNHOUSE",
+      "rentprice": 2000,
+      "beds": 2,
+      "baths": 1,
+      "squarefeet": 300,
+      "description": "See the possibilities! This is a 1/1/0 unit in Waikiki/Ala Wai; from the lanai, you can view the mountain, Ala Wai Canal and the golf course",
+      "owner": "bob@foo.com"
+    },
+    {
+      "streetaddress": "94979 Kauolu Pl",
+      "city": "Waipahu",
+      "state": "HI",
+      "image": "https://www.oahure.com/data/1212/1212918/2.jpg",
+      "zipcode": 96797,
+      "unitnumber": "805",
+      "longitude": -158.002995,
+      "latitude": 21.387295,
+      "propertytype": "CONDO",
+      "rentprice": 1200,
+      "beds": 1,
+      "baths": 1,
+      "squarefeet": 500,
+      "description": "Ocean and mountain views. Great landscaping and grounds, secured building, resident manager, 24 hour security & meeting room. Generator in case of blackout.",
+      "owner": "bill@foo.com"
+    },
+    {
+      "streetaddress": "1702 Kewalo St",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://photos.zillowstatic.com/p_f/ISivnykr7qbywq0000000000.jpg",
+      "zipcode": 96822,
+      "unitnumber": "1205",
+      "longitude": -157.836230,
+      "latitude": 21.307428,
+      "propertytype": "CONDO",
+      "rentprice": 1650,
+      "beds": 2,
+      "baths": 1,
+      "squarefeet": 500,
+      "description": " Prime town location, conveniently located near Punahou School, UH Manoa, transit, shops, and restaurants.",
+      "owner": "bill@foo.com"
+    },
+    {
+      "streetaddress": "1543 Makiki Street",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://photos.zillowstatic.com/p_f/ISuc12qwzulazh1000000000.jpg",
+      "zipcode": 96822,
+      "unitnumber": "205",
+      "longitude":-157.835159,
+      "latitude": 21.303139,
+      "propertytype": "CONDO",
+      "rentprice": 1500,
+      "beds": 2,
+      "baths": 1,
+      "squarefeet": 500,
+      "description": "Located in Makiki, at 1543 Makiki Street, just across the street from the Makiki Park offering a swimming pool, play ground, basketball and tennis courts",
+      "owner": "john@foo.com"
+    },
+    {
+      "streetaddress": "1550 Wilder Ave",
+      "city": "Honolulu",
+      "state": "HI",
+      "image": "https://photos.zillowstatic.com/p_f/ISuc12qwzulazh1000000000.jpg",
+      "zipcode": 96822,
+      "unitnumber": "704",
+      "longitude": -157.833459,
+      "latitude": 21.303543,
+      "propertytype": "CONDO",
+      "rentprice": 1300,
+      "beds": 1,
+      "baths": 1,
+      "squarefeet": 400,
+      "description": "Large, bright and clean studio, located on top floor in the building, with view of Punchbowl and Tantalus! Secured lobby and indoor community laundry located on-site. Rent includes Electric, water, sewer, garbage and gas!",
+      "owner": "john@foo.com"
+    }
+  ],
+  "defaultContacts": [
+    {
+      "firstName": "Philip",
+      "lastName": "Johnson",
+      "type": "Lister",
+      "owner": "test@foo.com",
+      "image": "https://philipmjohnson.github.io/images/philip2.jpeg",
+      "age": "20",
+      "area": "Manoa",
+      "preferences": ["No smoking", "No drinking"],
+      "description": "I am a Professor of Information and Computer Sciences at the University of Hawaii, Director of the Collaborative Software Development Laboratory, and the CEO of OpenPowerQuality.com."
+    },
+    {
+      "firstName": "Henri",
+      "lastName": "Casanova",
+      "type": "Lister",
+      "owner": "admin@foo.com",
+      "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4",
+      "age": "29",
+      "area": "Kaimuki",
+      "preferences": ["Parties allowed on the weekends", "Sleep at 10pm"],
+      "description": "I am originally from France. I maintain a list of reports from my surf sessions. I have proof that I ran the Hana relay with an actual Team."
+    },
+    {
+      "firstName": "Bruno",
+      "lastName": "Mars",
+      "type": "Lister",
+      "owner": "john@foo.com",
+      "image": "https://pbs.twimg.com/profile_images/952969165370884096/bK1_Bkpq.jpg",
+      "age": "20",
+      "area": "Manoa",
+      "preferences": ["No smoking", "No drinking"],
+      "description": "I am an American singer-songwriter, multi-instrumentalist, record producer, and dancer."
+    },
+    {
+      "firstName": "Ariana",
+      "lastName": "Grande",
+      "type": "Lister",
+      "owner": "bob@foo.com",
+      "image": "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_80%2Cw_300/MTQ3MzM3MTcxNjA5NTkzNjQ3/ariana_grande_photo_jon_kopaloff_getty_images_465687098.jpg",
+      "age": "20",
+      "area": "Manoa",
+      "preferences": ["No smoking", "No drinking"],
+      "description": "I am an American singer and actress."
+    },
+    {
+      "firstName": "Jenna",
+      "lastName": "Coleman",
+      "type": "Lister",
+      "owner": "bill@foo.com",
+      "image": "https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2016/08/25/11/jenna-coleman.jpg",
+      "age": "20",
+      "area": "Manoa",
+      "preferences": ["No smoking", "No drinking"],
+      "description": "I am an English actress and model."
+    }
+  ],
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://arnold:shek@ds143099.mlab.com:43099/haledb"
+
+    }
+  }
+}
+
+
