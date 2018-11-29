@@ -11,7 +11,7 @@ import AddMessage from '/imports/ui/components/messages/AddMessage';
 import Toolbar from '../components/Toolbar';
 import MyEditor from '../components/MyEditor';
 import AddUser from '../components/AddUser';
-
+import Chat from '../components/Chat';
 
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -36,58 +36,56 @@ class Board extends React.Component {
       <div>
         <div style={styles.height}>
           <Toolbar />
-          <Container>
-            <Grid>
+          <Grid>
+            <Grid.Column width={12}>
+              <Header as='h1'>File Name</Header>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Header as='h1'>Tools</Header>
+            </Grid.Column>
+          </Grid>
+          <Grid columns={2} divided>
+            <Grid.Row >
               <Grid.Column width={12}>
-                <Header as='h1'>File Name</Header>
+                <MyEditor />
+                <Container className="msgboard-container">
+                  <Grid columns='equal'>
+                    <Grid.Row stretched>
+                      <Grid.Column width={10}>
+                        <Segment>
+                          <Comment.Group size='small'>
+                            <Header as='h3' dividing>Messages</Header>
+                            <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
+                              <Feed>
+                                {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
+                              </Feed>
+                            </Segment>
+                            <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
+                          </Comment.Group>
+                        </Segment>
+                      </Grid.Column>
+                    </Grid.Row>
+                  </Grid>
+                </Container>
               </Grid.Column>
               <Grid.Column width={3}>
-                <Header as='h1'>Tools</Header>
-              </Grid.Column>
-            </Grid>
-            <Grid columns={2} divided>
-              <Grid.Row >
-                <Grid.Column width={12}>
-                  <MyEditor />
-                </Grid.Column>
-                <Grid.Column width={3}>
-                  <Grid.Row>
-                    <Segment>Task 1</Segment>
-                    <Segment>Task 2</Segment>
-                    <Segment>Task 3</Segment>
-                  </Grid.Row>
-                  <Grid.Row>
-                    {/* <Messenger/> */}
-                  </Grid.Row>
+                <Grid.Row>
+                  <Segment>Task 1</Segment>
+                  <Segment>Task 2</Segment>
+                  <Segment>Task 3</Segment>
+                </Grid.Row>
+                <Grid.Row>
+                  <AddUser groupId={String(this.props.groupid)}></AddUser>
+                </Grid.Row>
 
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Container>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
 
 
 
         </div>
-        <Container className="msgboard-container">
-          <Grid columns='equal'>
-            <Grid.Row stretched>
-              <Grid.Column width={10}>
-                <Segment>
-                  <Comment.Group size='small'>
-                    <Header as='h3' dividing>Messages</Header>
-                    <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
-                      <Feed>
-                        {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
-                      </Feed>
-                    </Segment>
-                    <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
-                  </Comment.Group>
-                </Segment>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
-        <AddUser groupId={String(this.props.groupid)}></AddUser>
+
       </div>
     );
   }

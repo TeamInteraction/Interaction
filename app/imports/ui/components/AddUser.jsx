@@ -52,9 +52,9 @@ class AddUser extends React.Component {
             const members = group.members;
             Groups.update(this.props.groupId, {
                 $set: {
-                  members
+                    members
                 }
-              }, (error) => (error ?
+            }, (error) => (error ?
                 Bert.alert({ type: 'danger', message: `Add Failed: ${error.message}` }) :
                 Bert.alert({ type: 'success', message: 'User Added' })));
             this.setState({ error: '' });
@@ -64,46 +64,40 @@ class AddUser extends React.Component {
     }
     render() {
         return (
-            <Container>
-                <Grid centered>
-                    <Grid.Column width={6}>
-                        <Container className="editprofile-container">
-
-                            <Form onSubmit={this.createOnClick}>
-                                <Header as="h2" textAlign="center">
-                                    Add Users To Group
-                  </Header>
-                                <Grid centered>
-                                    <Grid.Row>
-                                        <Grid.Column width={6}>
-                                            <Form.Input
-                                                label="Email"
-                                                name="email"
-                                                type="email"
-                                                placeholder=""
-                                                onChange={this.handleChange}
-                                            />
-                                        </Grid.Column>
-                                    </Grid.Row>
-                                    <Grid.Row>
-                                        <Form.Button content="Submit" />
-                                    </Grid.Row>
-                                </Grid>
-                            </Form>
-                            {this.state.error === '' ? (
-                                ''
-                            ) : (
-                                    <Message
-                                        error
-                                        header="Failed to add"
-                                        content={this.state.error}
-                                    />
-                                )}
-                        </Container>
-                    </Grid.Column>
-                </Grid>
-            </Container>
-        );
+            <Grid centered>
+                    <Container className="editprofile-container">
+                        <Form onSubmit={this.createOnClick}>
+                            <Header as="h2" textAlign="center">
+                                Add Users To Group
+                                </Header>
+                            <Grid centered>
+                                <Grid.Row>
+                                    <Grid.Column width={12}>
+                                        <Form.Input
+                                            label="Email"
+                                            name="email"
+                                            type="email"
+                                            placeholder=""
+                                            onChange={this.handleChange}
+                                        />
+                                    </Grid.Column>
+                                </Grid.Row>
+                                <Grid.Row>
+                                    <Form.Button content="Submit" />
+                                </Grid.Row>
+                            </Grid>
+                        </Form>
+                        {this.state.error === '' ? (
+                            ''
+                        ) : (
+                                <Message
+                                    error
+                                    header="Failed to add"
+                                    content={this.state.error}
+                                />
+                            )}
+                    </Container>
+            </Grid>);
     }
 }
 

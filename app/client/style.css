@@ -110,8 +110,10 @@
 .editprofile-container {
   background-color: #AFD2E9;
   margin-top: 125px;
+  padding-top: 20px;
+  padding-bottom: 20x;
   border-radius: 25px;
-  margin-bottom: 125px;
+  margin-bottom: 0;
 }
 
 .signout-container {
