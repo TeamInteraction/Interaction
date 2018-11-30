@@ -1,19 +1,48 @@
 import React from 'react';
-import { Feed, Comment } from 'semantic-ui-react';
+import { Feed, Comment, Button, Icon, Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { Tasks } from '/imports/api/task/task';
+
+
+
 
 class Task extends React.Component {
+  constructor(props) {
+    super(props);
+    this.deleteOnClick = this.deleteOnClick.bind(this);
+  }
+
+  deleteOnClick() {
+    Tasks.remove(this.props.task._id);
+  }
+
   render() {
+
+
     const feedstyle = { margin: '20px' }
     return (
+      <Grid>
+        <Grid.Column width={14}>
           <Comment style={feedstyle}>
-            <Comment.Avatar src={this.props.task.image} />
             <Comment.Content>
               <Comment.Author>{this.props.task.title}</Comment.Author>
               <Comment.Text>{this.props.task.task}</Comment.Text>
+
             </Comment.Content>
           </Comment>
+        </Grid.Column>
+        <Grid.Column>
+          <Button
+            onClick={this.deleteOnClick}
+            icon="check circle"
+            left
+          >
+          </Button>
+        </Grid.Column>
+
+      </Grid>
+
     );
   }
 }

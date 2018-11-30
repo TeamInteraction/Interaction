@@ -60,7 +60,7 @@ class AddTask extends React.Component {
                     <Container>
                         <Form onSubmit={this.createOnClick}>
                             <Header as="h2" textAlign="center">
-                                ToDo
+                                To-Do
                                 </Header>
                             <Grid centered>
                                 <Grid.Row>
