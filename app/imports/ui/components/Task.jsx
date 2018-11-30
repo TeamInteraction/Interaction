@@ -1,5 +1,5 @@
 import React from 'react';
-import { Feed, Comment, Button, Icon, Grid } from 'semantic-ui-react';
+import { Feed, Comment, Button, Segment, Grid } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Tasks } from '/imports/api/task/task';
@@ -22,8 +22,9 @@ class Task extends React.Component {
 
     const feedstyle = { margin: '20px' }
     return (
-      <Grid>
-        <Grid.Column width={14}>
+      <Segment>
+      <Grid verticalAlign='middle'>
+        <Grid.Column centered width={14}>
           <Comment style={feedstyle}>
             <Comment.Content>
               <Comment.Author>{this.props.task.title}</Comment.Author>
@@ -42,6 +43,7 @@ class Task extends React.Component {
         </Grid.Column>
 
       </Grid>
+      </Segment>
 
     );
   }
