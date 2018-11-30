@@ -10,7 +10,7 @@ class Task extends React.Component {
           <Comment style={feedstyle}>
             <Comment.Avatar src={this.props.task.image} />
             <Comment.Content>
-              <Comment.Author>{this.props.task.username}</Comment.Author>
+              <Comment.Author>{this.props.task.title}</Comment.Author>
               <Comment.Text>{this.props.task.task}</Comment.Text>
             </Comment.Content>
           </Comment>
