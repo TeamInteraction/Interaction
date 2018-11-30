@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Tasks } from '/imports/api/task/task';
 
-
-
-
 class Task extends React.Component {
   constructor(props) {
     super(props);
