@@ -120,26 +120,6 @@ export default class Signup extends React.Component {
                     </Grid.Column>
                   </Grid.Row>
                   <Grid.Row>
-                    <Grid.Column width={4}>
-                      <Form.Select
-                          fluid
-                          label='Gender'
-                          options={GenderOptions}
-                          placeholder='Gender'
-                          onChange={this.handleChange}
-                      />
-                    </Grid.Column>
-                    <Grid.Column width={4} className="signin-spacing">
-                      <Form.Select
-                          fluid
-                          label='User Type'
-                          options={TypeOptions}
-                          placeholder='Type'
-                          onChange={this.handleChange}
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row>
                       <Form.Button content="Submit"/>
                   </Grid.Row>
                   <Grid.Row>
