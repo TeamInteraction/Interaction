@@ -12,16 +12,16 @@
   ],
   "defaultContacts": [
     {
-      "firstName": "Philip",
-      "lastName": "Johnson",
+      "firstName": "Lebron",
+      "lastName": "James",
       "owner": "test@foo.com",
-      "image": "https://philipmjohnson.github.io/images/philip2.jpeg"
+      "image": "http://www.gstatic.com/tv/thumb/persons/287557/287557_v9_ba.jpg"
     },
     {
-      "firstName": "Henri",
-      "lastName": "Casanova",
+      "firstName": "James",
+      "lastName": "Franco",
       "owner": "admin@foo.com",
-      "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4"
+      "image": "https://m.media-amazon.com/images/M/MV5BMjA4MzMzNDM5MF5BMl5BanBnXkFtZTgwMjQ0MDk0NDM@._V1_UX214_CR0,0,214,317_AL_.jpg"
     },
     {
       "firstName": "Bruno",

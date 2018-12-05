@@ -1,10 +1,10 @@
 import { Meteor } from 'meteor/meteor';
-import { Messages } from '../../api/message/message';
+import { Tasks } from '../../api/task/task';
 
 /** This subscription publishes only the documents associated with the logged in user */
-Meteor.publish('Messages', function publish() {
+Meteor.publish('Tasks', function publish() {
   if (this.userId) {
-    return Messages.find();
+    return Tasks.find();
   }
   return this.ready();
 });
