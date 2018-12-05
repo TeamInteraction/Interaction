@@ -27,8 +27,8 @@ class App extends React.Component {
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/contactus" component={ContactUs}/>
-              <Route path="/message/:_id" component={GroupSelector}/>
-              <Route path="/group/:_id" component={Board}/>
+              <ProtectedRoute path="/message/:_id" component={GroupSelector}/>
+              <ProtectedRoute path="/group/:_id" component={Board}/>
               <ProtectedRoute path="/groupselector" component={GroupSelector}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               {/* <ProtectedRoute path="/board" component={Board}/>    */}

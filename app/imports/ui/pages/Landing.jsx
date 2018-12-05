@@ -53,11 +53,9 @@ class Landing extends React.Component {
                 textAlign="center"
                 style={{padding: "60px", backgroundColor: "#424B54"}}
             >
-              <Grid.Column centered>
-              </Grid.Column>
               <Grid.Column>
-                <p  className="landing-header font-blue">Share Documents<hr/></p> 
-                <p  className="landing-text font-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.   </p>
+                <p  className="landing-header font-blue">Group Collaboration<hr/></p> 
+                <p  className="landing-text font-white"></p>
               </Grid.Column>
 
             </Grid>
@@ -69,7 +67,8 @@ class Landing extends React.Component {
               <Grid.Row centered>
 
                 <p  className="landing-text">
-                t vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis e                </p>
+                Connect with your team and collaborate on a text document. Manage tasks and communicate with the integrated chatting system.
+                </p>
 
               </Grid.Row>
             </Grid>
@@ -78,7 +77,7 @@ class Landing extends React.Component {
                 style={{padding: "30px", backgroundColor: "#424B54"}}
             >
               <Grid.Row>
-                <p  className="landing-header font-blue">Explore<hr/></p>
+                <p  className="landing-header font-blue"><hr/></p>
 
               </Grid.Row>
 
