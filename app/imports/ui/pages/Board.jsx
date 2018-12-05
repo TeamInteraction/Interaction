@@ -50,29 +50,23 @@ class Board extends React.Component {
                 <Editor />
                 <Container className="msgboard-container">
                   <Grid columns='equal'>
-                    <Grid.Row stretched>
-                      <Grid.Column width={10}>
-                        <Segment>
-                          <Comment.Group size='small'>
-                            <Header as='h3' dividing>Messages</Header>
-                            <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
-                              <Feed>
-                                {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
-                              </Feed>
-                            </Segment>
-                            <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
-                          </Comment.Group>
-                        </Segment>
-                      </Grid.Column>
-                    </Grid.Row>
+                    
                   </Grid>
                 </Container>
               </Grid.Column>
               <Grid.Column width={3}>
                 <Grid.Row>
-                  <Segment>Task 1</Segment>
-                  <Segment>Task 2</Segment>
-                  <Segment>Task 3</Segment>
+                <Segment>
+                  <Comment.Group size='small'>
+                    <Header as='h3' dividing>Messages</Header>
+                    <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
+                      <Feed>
+                        {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
+                      </Feed>
+                    </Segment>
+                    <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
+                  </Comment.Group>
+                </Segment>
                 </Grid.Row>
                 <Grid.Row>
                   <AddUser groupId={String(this.props.groupid)}></AddUser>
