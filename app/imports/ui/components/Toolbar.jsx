@@ -7,7 +7,12 @@ import jsPDF from 'jspdf';
 class Document extends React.Component {
 
   print(){
-    var content = document.getElementById("test");
+    // var content = document.getElementById("firepad-container");
+    var content = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    matchBrackets: true,
+    mode: "text/x-csrc"
+  }).getValue();
     var pri = document.getElementById("toprint").contentWindow;
     pri.document.open();
     pri.document.write(content.innerHTML);
@@ -29,29 +34,15 @@ class Document extends React.Component {
     return (
       <div>
         <Menu>
-        <Dropdown text='File' pointing className='item' icon={null}>
-          <Dropdown.Menu>
-            <Dropdown.Item text='Rename...' description='crtl + r'/>
-            <Dropdown.Item text='Print' onClick={this.print}/>
-            <Dropdown.Item text='Download/Export As' onClick={this.download}/>
-          </Dropdown.Menu>
-        </Dropdown>
 
-        <Dropdown text='Format' pointing className='item' icon={null}>
-          <Dropdown.Menu>
-            <Dropdown.Item text='Bold' />
-            <Dropdown.Item text='Italic' />
-            <Dropdown.Item text='Underline' />
-            <Dropdown.Divider/>
-            <Dropdown.Item text='Font' />
-            <Dropdown.Item text='Font Size'/>
-            <Dropdown.Item text='Font Color'/>
-          </Dropdown.Menu>
-        </Dropdown>
-
-        <Menu.Item>
-          Changes
+        <Menu.Item onClick={this.print}>
+          Print
         </Menu.Item>
+
+        <Menu.Item onClick={this.download}>
+          Download
+        </Menu.Item>
+
 
         </Menu>
 

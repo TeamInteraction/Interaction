@@ -12,6 +12,7 @@ import Toolbar from '../components/Toolbar';
 import MyEditor from '../components/MyEditor';
 import AddUser from '../components/AddUser';
 import Chat from '../components/Chat';
+import Editor from '../components/Editor'
 
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -38,7 +39,6 @@ class Board extends React.Component {
           <Toolbar />
           <Grid>
             <Grid.Column width={12}>
-              <Header as='h1'>File Name</Header>
             </Grid.Column>
             <Grid.Column width={3}>
               <Header as='h1'>Tools</Header>
@@ -47,7 +47,7 @@ class Board extends React.Component {
           <Grid columns={2} divided>
             <Grid.Row >
               <Grid.Column width={12}>
-                <MyEditor />
+                <Editor />
                 <Container className="msgboard-container">
                   <Grid columns='equal'>
                     <Grid.Row stretched>
