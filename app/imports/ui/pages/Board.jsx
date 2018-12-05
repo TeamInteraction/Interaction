@@ -37,7 +37,7 @@ class Board extends React.Component {
     return (
       <div>
         <div style={styles.height}>
-          <Toolbar />
+           {/*}<Toolbar />{*/}
           <Grid>
             <Grid.Column width={12}>
             </Grid.Column>
@@ -49,11 +49,7 @@ class Board extends React.Component {
             <Grid.Row >
               <Grid.Column width={12}>
                 <Editor />
-                <Container className="msgboard-container">
-                  <Grid columns='equal'>
-                    
-                  </Grid>
-                </Container>
+
               </Grid.Column>
               <Grid.Column width={3}>
                 <Grid.Row>
@@ -68,34 +64,26 @@ class Board extends React.Component {
                     <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
                   </Comment.Group>
                 </Segment>
+                <Segment>
+                    <Comment.Group size='small'>
+                        <AddTask members={this.props.group.members} groupId={this.props.group._id} />
+                        <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
+                            <Feed>
+                                {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
+                            </Feed>
+                        </Segment>
+                        <AddUser groupId={String(this.props.groupid)}></AddUser>
+                    </Comment.Group>
+                </Segment>
                 </Grid.Row>
                 <Grid.Row>
-                  <AddUser groupId={String(this.props.groupid)}></AddUser>
+
                 </Grid.Row>
 
               </Grid.Column>
             </Grid.Row>
           </Grid>
 
-                            <Container className="msgboard-container">
-                                <Grid columns='equal'>
-                                    <Grid.Row stretched>
-                                        <Grid.Column width={10}>
-                                            <Segment>
-                                                <Comment.Group size='small'>
-                                                    <AddTask members={this.props.group.members} groupId={this.props.group._id} />
-                                                    <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
-                                                        <Feed>
-                                                            {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
-                                                        </Feed>
-                                                    </Segment>
-
-                                                </Comment.Group>
-                                            </Segment>
-                                        </Grid.Column>
-                                    </Grid.Row>
-                                </Grid>
-                            </Container>
 
         </div>
 
