@@ -5,7 +5,7 @@ Install Meteor & Node.
 __Clone Directory__
 
 ```
-https://github.com/eugenelao/ICS414_Interaction.git
+git clone https://github.com/TeamInteraction/Interaction.git
 ```
 
 Navigate to ICS414_Interaction/app/
