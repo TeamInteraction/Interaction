@@ -12,6 +12,8 @@ import AddMessage from '/imports/ui/components/messages/AddMessage';
 import Toolbar from '../components/Toolbar';
 import MyEditor from '../components/MyEditor';
 import AddUser from '../components/AddUser';
+import Chat from '../components/Chat';
+import Editor from '../components/Editor'
 import AddTask from '../components/AddTask';
 import Task from '../components/Task';
 
@@ -32,88 +34,74 @@ class Board extends React.Component {
                 height: '100%',
             }
         };
+    return (
+      <div>
+        <div style={styles.height}>
+          <Toolbar />
+          <Grid>
+            <Grid.Column width={12}>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Header as='h1'>Tools</Header>
+            </Grid.Column>
+          </Grid>
+          <Grid columns={2} divided>
+            <Grid.Row >
+              <Grid.Column width={12}>
+                <Editor />
+                <Container className="msgboard-container">
+                  <Grid columns='equal'>
+                    
+                  </Grid>
+                </Container>
+              </Grid.Column>
+              <Grid.Column width={3}>
+                <Grid.Row>
+                <Segment>
+                  <Comment.Group size='small'>
+                    <Header as='h3' dividing>Messages</Header>
+                    <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
+                      <Feed>
+                        {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
+                      </Feed>
+                    </Segment>
+                    <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
+                  </Comment.Group>
+                </Segment>
+                </Grid.Row>
+                <Grid.Row>
+                  <AddUser groupId={String(this.props.groupid)}></AddUser>
+                </Grid.Row>
 
-        return (
-            <div>
-                <div style={styles.height}>
-                    <Toolbar />
-                    <Grid>
-                        <Grid.Column width={12}>
-                            <Header as='h1'>File Name</Header>
-                        </Grid.Column>
-                        <Grid.Column width={3}>
-                            <Header as='h1'>Tools</Header>
-                        </Grid.Column>
-                    </Grid>
-                    <Grid columns={2} divided>
-                        <Grid.Row >
-                            <Grid.Column width={12}>
-                                <MyEditor />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
 
+                            <Container className="msgboard-container">
+                                <Grid columns='equal'>
+                                    <Grid.Row stretched>
+                                        <Grid.Column width={10}>
+                                            <Segment>
+                                                <Comment.Group size='small'>
+                                                    <AddTask members={this.props.group.members} groupId={this.props.group._id} />
+                                                    <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
+                                                        <Feed>
+                                                            {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
+                                                        </Feed>
+                                                    </Segment>
 
-                                <Container className="msgboard-container">
-                                    <Grid columns='equal'>
-                                        <Grid.Row stretched>
-                                            <Grid.Column width={10}>
-                                                <Segment>
-                                                    <Comment.Group size='small'>
-                                                        <Header as='h3' dividing>Messages</Header>
-                                                        <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
-                                                            <Feed>
-                                                                {this.props.messages.map((message, index) => <DirectMessage key={index} message={message} />)}
-                                                            </Feed>
-                                                        </Segment>
-                                                        <AddMessage members={this.props.group.members} groupId={this.props.group._id} />
-                                                    </Comment.Group>
-                                                </Segment>
-                                            </Grid.Column>
-                                        </Grid.Row>
-                                    </Grid>
-                                </Container>
+                                                </Comment.Group>
+                                            </Segment>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                </Grid>
+                            </Container>
 
-                                <Container className="msgboard-container">
-                                    <Grid columns='equal'>
-                                        <Grid.Row stretched>
-                                            <Grid.Column width={10}>
-                                                <Segment>
-                                                    <Comment.Group size='small'>
-                                                        <AddTask members={this.props.group.members} groupId={this.props.group._id} />
-                                                        <Segment style={{ overflow: 'auto', maxHeight: 200 }}>
-                                                            <Feed>
-                                                                {this.props.tasks.map((task, index) => <Task key={index} task={task} />)}
-                                                            </Feed>
-                                                        </Segment>
-                                                        
-                                                    </Comment.Group>
-                                                </Segment>
-                                            </Grid.Column>
-                                        </Grid.Row>
-                                    </Grid>
-                                </Container>
+        </div>
 
-                            </Grid.Column>
-                            <Grid.Column width={3}>
-                                <Grid.Row>
-                                    <Segment>Task 1</Segment>
-                                    <Segment>Task 2</Segment>
-                                    <Segment>Task 3</Segment>
-                                </Grid.Row>
-                                <Grid.Row>
-                                    <AddUser groupId={String(this.props.groupid)}></AddUser>
-                                </Grid.Row>
-
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
-
-
-
-                </div>
-
-
-            </div>
-        );
-    }
+      </div>
+    );
+  }
 }
 
 /** Require an array of Stuff documents in the props. */

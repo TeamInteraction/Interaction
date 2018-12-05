@@ -1,0 +1,11 @@
+#firepad-container {
+    width: 80%;
+    height: 500px;
+    margin: auto;
+}
+.CodeMirror{
+  background-color: white;
+}
+a.powered-by-firepad {
+display: none;
+}
