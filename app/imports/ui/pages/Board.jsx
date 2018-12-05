@@ -2,6 +2,7 @@ import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Container, Feed, Header, Loader, Grid, Segment, Table, Comment } from 'semantic-ui-react';
 import { Groups } from '/imports/api/group/group';
+import { Editors } from '/imports/api/editor/editor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Group from '/imports/ui/components/messages/Group';
@@ -14,6 +15,8 @@ import MyEditor from '../components/MyEditor';
 import AddUser from '../components/AddUser';
 import AddTask from '../components/AddTask';
 import Task from '../components/Task';
+import Editor from '../components/Editor';
+
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class Board extends React.Component {
@@ -33,6 +36,7 @@ class Board extends React.Component {
             }
         };
 
+
         return (
             <div>
                 <div style={styles.height}>
@@ -49,6 +53,7 @@ class Board extends React.Component {
                         <Grid.Row >
                             <Grid.Column width={12}>
                                 <MyEditor />
+                                <Editor/>
 
 
                                 <Container className="msgboard-container">
@@ -132,11 +137,22 @@ export default withTracker(({ match }) => {
     const subscription = Meteor.subscribe('Groups');
     const subscription2 = Meteor.subscribe('Messages');
     const subscription3 = Meteor.subscribe('Tasks');
+    const subscription4 = Meteor.subscribe('Editors');
+
+    if(Editors.find({groupid: groupId}) != null){
+        const text = "";
+        console.log("creating editor...");
+        Editors.insert({text, groupId});
+    }
+    else{
+        console.log(Editors.find({groupId: groupId})[0]);
+    }
+
     return {
         group: Groups.findOne(groupId),
         messages: Messages.find({ groupId: groupId }).fetch(),
         groupid: groupId,
         tasks: Tasks.find({ groupId: groupId }).fetch(),
-        ready: subscription.ready() && subscription2.ready() && subscription3.ready(),
+        ready: subscription.ready() && subscription2.ready() && subscription3.ready() && subscription4.ready(),
     };
 })(Board);
