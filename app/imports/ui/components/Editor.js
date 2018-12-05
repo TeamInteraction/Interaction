@@ -10,19 +10,20 @@ class Editor extends Component {
       //         authDomain: "firepad-tests.firebaseapp.com",
       //         databaseURL: "https://firepad-tests.firebaseio.com"
       apiKey: "AIzaSyCGlQ7ToDcNAxzNbwiejRQxZULGXE7_1U0",
-   databaseURL: "https://interaction-a7091.firebaseio.com"
+      databaseURL: "https://interaction-a7091.firebaseio.com"
 
     };
-    window.firebase.initializeApp(config);
+    if (!window.firebase.apps.length)
+      window.firebase.initializeApp(config);
     //// Get Firebase Database reference.
     var firepadRef = this.getExampleRef();
     //// Create CodeMirror (with lineWrapping on).
     var codeMirror = window.CodeMirror(document.getElementById('firepad-container'), { lineWrapping: true });
     //// Create Firepad (with rich text toolbar and shortcuts enabled).
     var firepad = window.Firepad.fromCodeMirror(firepadRef, codeMirror,
-        { richTextToolbar: true, richTextShortcuts: true });
+      { richTextToolbar: true, richTextShortcuts: true });
     //// Initialize contents.
-    firepad.on('ready', function() {
+    firepad.on('ready', function () {
       if (firepad.isHistoryEmpty()) {
         firepad.setHtml('<span style="font-size: 24px;">Rich-text editing with <span style="color: red">Firepad!</span></span><br/><br/>Collaborative-editing made easy.\n');
       }
@@ -47,9 +48,9 @@ class Editor extends Component {
 
   render() {
     return (
-        <div>
-            <div id="firepad-container"></div>
-        </div>
+      <div>
+        <div id="firepad-container"></div>
+      </div>
 
     );
   }
