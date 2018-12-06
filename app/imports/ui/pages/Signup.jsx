@@ -11,8 +11,6 @@ export default class Signup extends React.Component {
     this.state = {
       firstName: '',
       lastName: '',
-      gender: '',
-      userType: '',
       email: '',
       password: '',
       error: '',
@@ -28,7 +26,7 @@ export default class Signup extends React.Component {
   }
 
   handleSubmit() {
-    const { firstName, lastName, gender, userType, email, password } = this.state;
+    const { firstName, lastName, email, password } = this.state;
     Accounts.createUser({ email, username: email, password }, (err) => {
       if (err) {
         this.setState({ error: err.reason });
@@ -37,12 +35,7 @@ export default class Signup extends React.Component {
         Users.insert({
           firstName,
           lastName,
-          userType,
           image: '/images/default-profile.png',
-          age: 21,
-          area: "Manoa",
-          preferences: ["Update Preferences"],
-          description: "Update Description",
           owner
         }, this.insertCallback);
         this.setState({ error: '', redirectToReferer: true });
@@ -115,26 +108,6 @@ export default class Signup extends React.Component {
                           name="password"
                           placeholder="Password"
                           type="password"
-                          onChange={this.handleChange}
-                      />
-                    </Grid.Column>
-                  </Grid.Row>
-                  <Grid.Row>
-                    <Grid.Column width={4}>
-                      <Form.Select
-                          fluid
-                          label='Gender'
-                          options={GenderOptions}
-                          placeholder='Gender'
-                          onChange={this.handleChange}
-                      />
-                    </Grid.Column>
-                    <Grid.Column width={4} className="signin-spacing">
-                      <Form.Select
-                          fluid
-                          label='User Type'
-                          options={TypeOptions}
-                          placeholder='Type'
                           onChange={this.handleChange}
                       />
                     </Grid.Column>
